@@ -1,7 +1,40 @@
-* {
-	font-family: sans-serif;
+body {
+	color: #111;
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 0 16px;
+	/* --- */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
-img {
+h1 {
+	font-size: 64px;
+	margin-bottom: 16px;
+}
+
+header {
+	margin-top: 16px;
+	margin-bottom: 48px;
+}
+
+a {
+	color: #777;
+	margin-right: 16px;
+}
+
+footer {
+	color: #777;
+	border-top: 1px solid #eee;
+	padding: 16px 0;
+}
+
+.img {
 	width: 100px;
+}
+
+.main-content {
+	flex-grow: 1;
 }
