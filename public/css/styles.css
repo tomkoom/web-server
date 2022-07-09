@@ -1,7 +1,11 @@
+* {
+	font-family: sans-serif;
+}
+
 h1 {
-  color: grey;
+	color: grey;
 }
 
 img {
-  width: 100px;
+	width: 100px;
 }
