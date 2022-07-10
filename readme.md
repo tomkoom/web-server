@@ -1,1 +1,1 @@
-Node.js web server for [weather app](https://github.com/tomkoom/weather-app).
+Weather app Node.js web server.
