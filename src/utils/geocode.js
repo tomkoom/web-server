@@ -5,13 +5,11 @@ require("dotenv").config();
 const mapboxAPIKey = process.env.MAPBOX_APIKEY;
 
 const geocode = (address, callback) => {
-	console.log(address);
 	const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
 		address
 	)}.json?access_token=${mapboxAPIKey}&limit=1`; // encode uri
 
 	request({ url, json: true }, (error, { body }) => {
-		console.log(body);
 		if (error) {
 			callback("Unable to connect to geolocation service.", undefined);
 		} else if (body.features.length === 0) {
