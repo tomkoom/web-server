@@ -38,3 +38,18 @@ footer {
 .main-content {
 	flex-grow: 1;
 }
+
+input {
+	border: 1px solid #ccc;
+	padding: 8px;
+	font-size: 1rem;
+}
+
+button {
+	cursor: pointer;
+	border: 1px solid #777;
+	background-color: #777;
+	color: white;
+	padding: 8px;
+	font-size: 1rem;
+}

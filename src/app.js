@@ -44,13 +44,14 @@ app.get("/help", (req, res) => {
 });
 
 app.get("/weather", (req, res) => {
+	console.log(req.query);
 	if (!req.query.address) {
 		return res.send({
 			error: "You must provide a search term.",
 		});
 	}
 
-	geocode(req.query.address, (err, { latitude, longitude, location }) => {
+	geocode(req.query.address, (err, { latitude, longitude, location } = {}) => {
 		if (err) {
 			return res.send({
 				error: err,
@@ -69,18 +70,6 @@ app.get("/weather", (req, res) => {
 				query: req.query.address,
 			});
 		});
-	});
-});
-
-app.get("/products", (req, res) => {
-	if (!req.query.search) {
-		return res.send({
-			error: "You must provide a search term.",
-		});
-	}
-	console.log(req.query);
-	res.send({
-		products: [],
 	});
 });
 
